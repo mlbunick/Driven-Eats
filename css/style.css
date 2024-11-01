@@ -23,9 +23,8 @@ html, body {
     flex-direction: column;
     justify-content: center;
     top: 0;
-    left: 0;
 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3)
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .top-bar-h1{
@@ -55,10 +54,11 @@ html, body {
 .itens{
     display: flex;
     flex-direction: row;
-    overflow: scroll;
+    overflow-x: auto;
+    position: relative;
     justify-content: space-evenly;
     gap: 2%;
-    margin-left: 5%;
+    padding: 0 5%;
     margin-top: 2%;
 }
 
@@ -109,6 +109,8 @@ html, body {
     flex-direction: column;
     justify-content: left;
     gap: 5px;
+    box-shadow: 0px 0px 10px -4px #00000040;
+    margin-bottom: 5px;
 }
 
 .item h1{
@@ -177,4 +179,105 @@ html, body {
 
 .itens::-webkit-scrollbar{
     display: none; /* Safari and Chrome */
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    background-color:#50D074;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 91.06%;
+    height: 253px;
+    justify-items: center;
+    align-items: center;
+
+    box-shadow: 0px 0px 10px 1px #00000040;
+
+    border-radius: 9px;
+    opacity: 0px;
+}
+
+.conteudo_modal{
+    display: flex;
+    flex-direction: column;
+    padding: 21px;
+    color: white;
+}
+
+.modal h2{
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 25.78px;
+    text-align: center;
+}
+
+.modal a{
+    text-decoration: none;
+    color: inherit;
+    color:#50D074;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 25.78px;
+    letter-spacing: 0.018em;
+    text-align: center;
+    border: 2px solid white;
+    padding: 5px 15px;
+    border-radius: 100px;
+    border-color: white;
+    background-color: white;
+    opacity: 0px;
+
+}
+
+.modal button{
+    display: block;
+    font: inherit;
+    text-decoration: none;
+    color: inherit;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 23.44px;
+    letter-spacing: 0.018em;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.resumoPedido{
+    margin: 10px;
+}
+
+.resumoPedido p{
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25.78px;
+    letter-spacing: 0.018em;
+    text-align: center;
+}
+
+.selecionado{
+    outline: 9px solid #32B72F;
+    outline-offset: -9px;
+    box-shadow: 0px 0px 0px 5px #32B72F inset;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.selecionado-footer{
+    background: #32B72F;
+}
+
+.hidden {
+    display: none;
 }

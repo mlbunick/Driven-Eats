@@ -13,123 +13,135 @@
         <h3 class="top-bar-h3">Sua comida em 6 minutos</h3>
     </header>
 
+    <div class="modal hidden">
+        <div class="conteudo_modal">
+            <h2>Confirme seu pedido</h2>
+            <div class="resumoPedido"></div>
+            <p class="Total"></p>
+            <a href="#" target="_blank" class="confirm" id="whatsappLink" onclick="pedidoWhatsapp()">Tudo certo, pode pedir!</a>
+            <button class="cancel">Cancelar</button>
+        </div>       
+    </div>
+
     <div class="content">
         <h1 class="header-itens">Primeiro, seu prato</h1>
 
-        <div class="itens">
-            <button class="item">
+        <div class="itens pratos">
+            <button class="item prato-1" onclick="selecionar(this.className.split(' ')[1])">
                 <div class="img-item">
                     <img src="assets/projeto__driven-eats__imagens/pf_frango.jpg">
                 </div>
 
-                <h1>Frango Yin Yang</h1>
+                <h1 id = "1-prato" class="nome-prato">Frango Yin Yang</h1>
                 <h3>Um pouco de batata, um pouco de salada</h3>
                 
-                <p>14.90</p>
+                <p id = "1-prato" class="preco-prato">14.90</p>
             </button>
 
-            <button class="item">
+            <button class="item prato-2" onclick="selecionar(this.className.split(' ')[1])">
                 <div class="img-item">
                     <img src="assets/projeto__driven-eats__imagens/pf_carne.jpg">
                 </div>
 
-                <h1>Carne</h1>
+                <h1 id = "2-prato" class="nome-prato">Carne</h1>
                 <h3>Um pouco de batata, um pouco de salada</h3>
                 
-                <p>14.90</p>
+                <p id = "2-prato" class="preco-prato">14.90</p>
             </button>
 
-            <button class="item">
+            <button class="item prato-3" onclick="selecionar(this.className.split(' ')[1])">
                 <div class="img-item">
                     <img src="assets/projeto__driven-eats__imagens/pf_calabresa.png">
                 </div>
                 
-                <h1>Calabresa</h1>
+                <h1 id = "3-prato" class="nome-prato">Calabresa</h1>
                 <h3>Um pouco de batata, um pouco de salada</h3>
                 
-                <p>14.90</p>
+                <p id = "3-prato" class="preco-prato">14.90</p>
             </button>
 
         </div>
 
         <h1 class="header-itens-2">Agora, sua bebida</h1>
 
-        <div class="itens">
-            <button class="item">
+        <div class="itens bebidas">
+            <button class="item bebida-1" onclick="selecionar(this.className.split(' ')[1])">
                 <div class="img-item">
                     <img src="assets/projeto__driven-eats__imagens/coca.png">
                 </div>
 
-                <h1>Coquinha Gelada</h1>
+                <h1 id = "1-bebida" class="nome-prato">Coquinha Gelada</h1>
                 <h3>Lata 350ml</h3>
                 
-                <p>4.90</p>
+                <p id = "1-bebida" class="preco-prato">4.90</p>
             </button>
 
-            <button class="item">
+            <button class="item bebida-2" onclick="selecionar(this.className.split(' ')[1])">
                 <div class="img-item">
                     <img src="assets/projeto__driven-eats__imagens/fanta.png">
                 </div>
 
-                <h1>Fanta Geladinha</h1>
+                <h1 id = "2-bebida" class="nome-prato">Fanta Geladinha</h1>
                 <h3>Lata 350ml</h3>
                 
-                <p>4.90</p>
+                <p id = "2-bebida"  class="preco-prato">4.90</p>
             </button>
 
-            <button class="item">
+            <button class="item bebida-3" onclick="selecionar(this.className.split(' ')[1])">
                 <div class="img-item">
                     <img src="assets/projeto__driven-eats__imagens/suco.png">
                 </div>
                 
-                <h1>Suco</h1>
+                <h1 id = "3-bebida" class="nome-prato">Suco</h1>
                 <h3>Copo 500ml</h3>
                 
-                <p>4.90</p>
+                <p id = "3-bebida" class="preco-prato">4.90</p>
             </button>
 
         </div>
         
         <h1 class="header-itens-3">Por fim, sua sobremesa</h1>
 
-        <div class="itens">
-            <button class="item">
+        <div class="itens sobremesas">
+            <button class="item sobremesa-1" onclick="selecionar(this.className.split(' ')[1])">
                 <div class="img-item">
                     <img src="assets/projeto__driven-eats__imagens/pudim.jpg">
                 </div>
 
-                <h1>Pudim</h1>
+                <h1 id = "1-sob" class="nome-prato">Pudim</h1>
                 <h3>Apenas Pudim</h3>
                 
-                <p>7.90</p>
+                <p id = "1-sob" class="preco-prato">7.90</p>
             </button>
 
-            <button class="item">
+            <button class="item sobremesa-2" onclick="selecionar(this.className.split(' ')[1])">
                 <div class="img-item">
                     <img src="assets/projeto__driven-eats__imagens/brownie.jpg">
                 </div>
 
-                <h1>Brownie</h1>
+                <h1 id = "2-sob" class="nome-prato">Brownie</h1>
                 <h3>Apenas Brownie</h3>
                 
-                <p>7.90</p>
+                <p id = "2-sob" class="preco-prato">7.90</p>
             </button>
 
-            <button class="item">
+            <button class="item sobremesa-3" onclick="selecionar(this.className.split(' ')[1])">
                 <div class="img-item">
                     <img src="assets/projeto__driven-eats__imagens/mouse.jpg">
                 </div>
                 
-                <h1>Mouse</h1>
+                <h1 id = "3-sob" class="nome-prato">Mouse</h1>
                 <h3>Apenas Mouse</h3>
                 
-                <p>4.90</p>
+                <p id = "3-sob" class="preco-prato">4.90</p>
             </button>
         </div>
     </div>
 
-    <header class="btt-bar">
-        <button class="btt-bar-button">Selecione os 3 itens para fechar o pedido</button>
-    </header>
+    <footer class="btt-bar">
+        <button class="btt-bar-button" onclick="fecharPedido()">Selecione os 3 itens para fechar o pedido</button>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
